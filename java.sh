@@ -16,8 +16,8 @@ fi
 PARAMS_STR=$(echo "$PARAMS")
 
 # Split the parameter into version and flavor using space as a delimiter
-VER=$(echo $PARAMS_STR | cut -d ' ' -f 1)
-FLAVOR=$(echo $PARAMS_STR | cut -d ' ' -f 2)
+VER=$(echo $PARAMS_STR | cut -d ',' -f 1)
+FLAVOR=$(echo $PARAMS_STR | cut -d ',' -f 2)
 
 # Check if both version and flavor are provided
 if [ -z "$VER" ] || [ -z "$FLAVOR" ]; then
