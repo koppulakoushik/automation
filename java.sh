@@ -13,6 +13,10 @@ if [ -z "$VER" ] || [ -z "$FLAVOR" ]; then
     exit 1
 fi
 
+# Debugging: Output the values of VER and FLAVOR to verify they are split correctly
+echo "Version: $VER"
+echo "Flavor: $FLAVOR"
+
 # The rest of your original script goes here...
 # Here’s a summary of what it does:
 #
@@ -20,9 +24,6 @@ fi
 # 2. Downloads and extracts the JDK archive.
 # 3. Imports necessary certificates into the JDK's truststore.
 # 4. Compresses the new JDK version and uploads it to Artifactory.
-
-# Example of a simplified JDK download logic, with version and flavor:
-# (You should have your original logic here for downloading, extracting, and cert import)
 
 echo "Downloading and processing JDK version $VER, flavor $FLAVOR..."
 
